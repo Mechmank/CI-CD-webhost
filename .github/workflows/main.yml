@@ -1,5 +1,5 @@
 name: Web Host
-on: workflow-dispatch
+on: workflow_dispatch
 jobs:
   hosting-website:
     runs-on: self-hosted
@@ -11,7 +11,7 @@ jobs:
       - name: Checking the OS of runner
         run:
           echo "Runner OS: $RUNNER_OS"
-          
+
       - name: Checkout code
         uses: actions/checkout@3
 

@@ -9,7 +9,7 @@ jobs:
     steps:
 
       - name: Checking the OS of runner
-        run:
+        run: |
           echo "Runner OS: $RUNNER_OS"
 
       - name: Checkout code

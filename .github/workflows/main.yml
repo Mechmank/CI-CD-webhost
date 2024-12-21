@@ -1,5 +1,7 @@
 name: Web Host
-on: workflow_dispatch
+on:
+  push:
+  workflow_dispatch:
 jobs:
   hosting-website:
     runs-on: self-hosted

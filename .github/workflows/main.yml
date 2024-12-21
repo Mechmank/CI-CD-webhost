@@ -3,9 +3,9 @@ on: workflow_dispatch
 jobs:
   hosting-website:
     runs-on: self-hosted
-    defaults:
-      run:
-        working-directory: hostfiles
+    #defaults:
+     # run:
+      #  working-directory: hostfiles
 
     steps:
 
@@ -14,12 +14,12 @@ jobs:
           echo "Runner OS: $RUNNER_OS"
 
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Copy the cods from github to host server
         run: | 
           sudo rm -rf /var/www/html/*
-          sudo cp -r * /var/www/html/
+          sudo cp -r hostfiles/* /var/www/html/
 
       - name: Starting the nginx service
         run: | 

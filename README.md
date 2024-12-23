@@ -1,4 +1,5 @@
-CI-CD Webhost
+**CI-CD Webhost**
+
 This project demonstrates how to host a website on an Ubuntu server under a CI/CD pipeline using GitHub Actions. It automates the process of deploying web files (e.g., HTML, CSS, etc.) to an EC2 instance hosted on AWS.
 
 Table of Contents

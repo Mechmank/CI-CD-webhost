@@ -1,6 +1,6 @@
 name: Web Host
 on:
-  push:
+  #push:
   workflow_dispatch:
 jobs:
   hosting-website:
@@ -17,6 +17,9 @@ jobs:
 
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Install the nginx
+        run: apt install nginx -y 
 
       - name: Copy the cods from github to host server
         run: | 

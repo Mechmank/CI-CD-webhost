@@ -11,12 +11,12 @@ jobs:
 
     steps:
 
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Checking the OS of runner
         run: |
           echo "Runner OS: $RUNNER_OS"
-
-      - name: Checkout code
-        uses: actions/checkout@v4
 
       - name: Install the nginx
         run: apt install nginx -y 

@@ -19,7 +19,7 @@ jobs:
           echo "Runner OS: $RUNNER_OS"
 
       - name: Install the nginx
-        run: apt install nginx -y 
+        run: sudo apt install nginx -y 
 
       - name: Copy the cods from github to host server
         run: | 

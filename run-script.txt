@@ -1,0 +1,22 @@
+# run.sh file always need to be executed manually in self hosted runners before starting the actions. To overcome this 
+# we can write the below custom service in /etc/systemd/system/run-script.service file to execute run.sh script automatically.
+
+[Unit]
+Description= Script Runner Service
+After=network.target
+
+[Service] 
+Type=simple
+Restart=always
+User=ubuntu
+WorkingDirectory=/home/ubuntu/actions-runner
+ExecStart=/home/ubuntu/actions-runner/run.sh
+
+[Install]
+WantedBy=muti-user.target
+
+# once saved execute belo commands.
+systemctl daemon-reload
+systemctl start run-script.service
+systemctl enable run-script.service
+systemctl status run-script.service

@@ -1,6 +1,6 @@
 name: Web Host
 on:
-  push:
+  #push:
   workflow_dispatch:
 jobs:
   hosting-website:

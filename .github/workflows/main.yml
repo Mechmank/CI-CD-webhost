@@ -21,7 +21,7 @@ jobs:
       - name: Install the nginx
         run: sudo apt install nginx -y 
 
-      - name: Copy the cods from github to host server
+      - name: Copy the codes from github to host server
         run: | 
           sudo rm -rf /var/www/html/*
           sudo cp -r * /var/www/html/
